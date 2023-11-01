@@ -145,9 +145,7 @@ python index.py --c config/index/webtable/starmie.yaml
 python query.py --c config/query/webtable/starmie.yaml
 ```
 
-If you want to try other algorithms, you can read more details according :
-
-<div id="-table">table</div>
+If you want to try other algorithms, you can read more details according to the <div id="-table">table</div> :
 
 |                 Algorithms                  |     Task     |                            Train                             |
 | :-----------------------------------------: | :----------: | :----------------------------------------------------------: |
