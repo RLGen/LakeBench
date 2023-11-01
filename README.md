@@ -7,8 +7,9 @@
   <a href="#-data-and-query">Data and Query</a> •
   <a href="#-getstart">GettingStart</a> •
   <a href="#-quickstart">QuickStart</a> •
-  <a href="#-result-uploading">Result Uploading</a> •
+  <a href="#-result">Result</a> •
 </p>
+
 
 
 
@@ -141,7 +142,9 @@ After training, you can check the evaluation performance on training logs, or ru
 python eval.py --datasets webtable_small --methods starmie --td union
 ```
 
-##  📧 Result Uploading
+<span id="-result"></span>
+
+##  📧 Results
 
 
 
