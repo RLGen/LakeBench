@@ -130,19 +130,19 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 **Step2: Pretrain**
 
 ```sh
-python pretrain.py --c config/pretrain/webtable/starmie.yaml
+python pretrain.py --task webtable
 ```
 
 **Step3: Indexing**
 
 ```sh
-python index.py --c config/index/webtable/starmie.yaml
+python index.py --benchmark webtable
 ```
 
 **Step4: Querying**
 
 ```sh
-python query.py --c config/query/webtable/starmie.yaml
+python query.py --benchmark webtable --K 5 --N 10 --threshold 0.7
 ```
 
 If you want to try other algorithms, you can read more details according to the table:

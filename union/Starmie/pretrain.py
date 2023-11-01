@@ -49,17 +49,14 @@ if __name__ == '__main__':
         torch.cuda.manual_seed_all(seed)
 
     # Change the data paths to where the benchmarks are stored
-    if "santos" in hp.task:
-        path = 'data/%s/datalake' % hp.task
-        if hp.task == "santosLarge":
-            path = 'data/santos-benchmark/real-benchmark/datalake'
-    elif "tus" in hp.task:
-        path = 'data/table-union-search-benchmark/small/benchmark'
-        if hp.task == "tusLarge":
-            path = 'data/table-union-search-benchmark/large/benchmark'
-
-    else:
-        path = 'data/%s/tables' % hp.task
+    if "webtable" in hp.task:
+        path = 'data/webtable/small/datalake'
+        if hp.task == "webtable_large":
+            path = 'data/webtable/large/datalake'
+    elif "opendata" in hp.task:
+        path = 'data/opendata/small/benchmark'
+        if hp.task == "opendata_large":
+            path = 'data/opendata/large/datalake'
     # trainset = PretrainTableDataset(path,
     #                      augment_op=hp.augment_op,
     #                      lm=hp.lm,

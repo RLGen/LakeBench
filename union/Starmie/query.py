@@ -10,7 +10,7 @@ import sys
 import os
 from tqdm import tqdm
 
-sys.argv = ['your_script_name.py', '--encoder', 'cl', '--benchmark', 'opendata', '--run_id', '0', '--single_column', '--K', '60', '--scal', '1.0']
+# sys.argv = ['your_script_name.py', '--encoder', 'cl', '--benchmark', 'opendata', '--run_id', '0', '--single_column', '--K', '60', '--scal', '1.0']
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -21,6 +21,8 @@ if __name__ == '__main__':
     parser.add_argument("--K", type=int, default=60)
     parser.add_argument("--scal", type=float, default=1.0)
     parser.add_argument("--mlflow_tag", type=str, default=None)
+    parser.add_argument("--N", type=int, default=10)
+    parser.add_argument("--threshold", type=float, default=0.7)
 
     hp = parser.parse_args()
     
@@ -44,8 +46,8 @@ if __name__ == '__main__':
 
     N = 10
     table_id = hp.run_id
-    table_path = "/data/final_result/aurum/"+dataFolder+"/opendata_small_with_query.pkl"
-    query_path = "/data/final_result/aurum/"+dataFolder+"/opendata_small_query.pkl"
+    table_path = "/data/final_result/aurum/"+dataFolder+"/"+dataFolder+"_small_with_query.pkl"
+    query_path = "/data/final_result/aurum/"+dataFolder+"/"+dataFolder+"_small_query.pkl"
     index_path = "/data/final_result/aurum/"+dataFolder+"/hnsw_opendata_small_"+str(table_id)+"_"+str(hp.scal)+".bin"
 
     # Call HNSWSearcher from hnsw_search.py

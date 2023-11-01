@@ -93,18 +93,29 @@ if __name__ == '__main__':
 
     # Change the data paths to where the benchmarks are stored
     if dataFolder == 'opendata':
-        DATAPATH = "/data_ssd/opendata/small/"
+        DATAPATH = "/data/opendata/small/"
         dataDir = ['datasets_UK', 'datasets_SG', 'datasets_CAN', 'datasets_USA']
     elif dataFolder == 'opendata_large':
-        DATAPATH = "/data2/opendata/large/"
+        DATAPATH = "/data/opendata/large/"
         dataDir = ['UK', 'SG', 'CAN', 'USA']
     elif dataFolder == 'webtable':
-        DATAPATH = '/data_ssd/webtable/large/'
-        # dataDir = ['query', 'lake']
-        dataDir = ['split_6']
-    elif dataFolder == 'query':
-        DATAPATH = "/data_ssd/webtable/large/"
+        DATAPATH = '/data/webtable/small/'
+        dataDir = ['split_1']
+    elif dataFolder == 'webtable_large':
+        DATAPATH = '/data/webtable/large/'
+        dataDir = ['split_1', 'split_2', 'split_3', 'split_4', 'split_5', 'split_6']
+    elif dataFolder == 'webtable_small_query':
+        DATAPATH = "/data/webtable/small/"
         dataDir = ['small_query']
+    elif dataFolder == 'webtable_large_query':
+        DATAPATH = "/data/webtable/large/"
+        dataDir = ['large_query']
+    elif dataFolder == 'opendata_small_query':
+        DATAPATH = "/data/webtable/small/"
+        dataDir = ['small_query']
+    elif dataFolder == 'opendata_large_query':
+        DATAPATH = "/data/webtable/large/"
+        dataDir = ['large_query']
 
     inference_times = 0
     # dataDir is the query and data lake
