@@ -115,6 +115,25 @@ python index.py --c config/union/index/starmie/webtable_small.yaml
 python query.py --c config/union/query/starmie/webtable_small.yaml
 ```
 
+Here are other algorithms training steps:
+
+|         Algorithms          |
+| :-------------------------: |
+| [Joise](join/Joise/join.md) |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+
+
+
 ### Evalution
 
 After training, you can check the evaluation performance on training logs, or running evaluation script:
