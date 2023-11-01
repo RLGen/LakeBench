@@ -3,13 +3,12 @@
 </div>
 <p align="center">
   <a href="#-community">Community</a> •
-  <a href="#-leaderboard">leaderborad</a> •
+  <a href="#-struct">Folder Structure</a> •
   <a href="#-data-and-query">Data and Query</a> •
   <a href="#-getstart">GettingStart</a> •
   <a href="#-quickstart">QuickStart</a> •
   <a href="#-result">Result</a> •
 </p>
-
 
 
 
@@ -40,7 +39,7 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 - [Apache Flink](https://flink.apache.org/)
 - [Intel](https://www.intel.com/)
 
-<span id="-leaderboard"></span>
+<span id="-struct"></span>
 
 ## 🏆 Folder Structure
 
