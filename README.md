@@ -115,22 +115,21 @@ python index.py --c config/union/index/starmie/webtable_small.yaml
 python query.py --c config/union/query/starmie/webtable_small.yaml
 ```
 
-Here are other algorithms training steps:
+If you want to try other algorithms, here are other training steps:
 
-|         Algorithms          |
-| :-------------------------: |
-| [Joise](join/Joise/join.md) |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
-|                             |
+|                 Algorithms                  |     Task     |                            Train                             |
+| :-----------------------------------------: | :----------: | :----------------------------------------------------------: |
+|        [Joise](join/Joise/joise.md)         |     Join     |         [./join/Joise/joise.md](join/Joise/joise.md)         |
+|  [LSH Ensemble](join/LSH Ensemble/lsh.md)   |     Join     |    [./join/LSH Ensemble/lsh.md](join/LSH Ensemble/lsh.md)    |
+|       [Pexeso](join/Pexeso/pexeso.md)       |     Join     |       [./join/Pexeso/pexeso.md](join/Pexeso/pexeso.md)       |
+|    [DeepJoin](join/Deepjoin/deepjoin.md)    |     Join     |   [./join/Deepjoin/deepjoin.md](join/Deepjoin/deepjoin.md)   |
+|           [TUS](union/TUS/tus.md)           |    Union     |            [./union/TUS/tus.md](union/TUS/tus.md)            |
+|           [D3L](union/D3L/d3l.md)           |    Union     |            [./union/D3L/d3l.md](union/D3L/d3l.md)            |
+|      [Santos](union/Santos/santos.md)       |    Union     |      [./union/Santos/santos.md](union/Santos/santos.md)      |
+|     [Starmie](union/Starmie/starmie.md)     |    Union     |    [./union/Starmie/starmie.md](union/Starmie/starmie.md)    |
+|      [Frt12](join&union/Frt12/frt.md)       | Join & Union |     [./join&union/Frt12/frt.md](join&union/Frt12/frt.md)     |
+| [InfoGather](join&union/InfoGather/info.md) | Join & Union | [./join&union/InfoGather/info.md](join&union/InfoGather/info.md) |
+|     [Aurum](join&union/Aurum/aurum.md)      | Join & Union |   [./join&union/Aurum/aurum.md](join&union/Aurum/aurum.md)   |
 
 
 
