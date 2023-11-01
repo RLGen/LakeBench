@@ -42,9 +42,39 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 <span id="-leaderboard"></span>
 
-## 🏆 Leaderboard
+## 🏆 Folder Structure
 
-This leaderboard showcases the performance of various algorithms on LakeBench. Two performance metrics are adopted: *(i) Efficiency* : the time of both offline index building and online query processing ; *(ii)Memory Usage* : The memory consumption of both offline index building and online query processing.
+
+
+```
+.
+├─── config                  # setting parameters        
+├─── pic                     # picture of different experiments
+├─── model                   # save model
+├─── Datasets                
+| ├─── original              # original datasets
+| └─── processing            # train_data/val_data/test_data
+├─── RLGen
+| ├─── AC.py                 # framework of RLGen
+| ├─── Classifier.py         # choose Weak/Semi classification
+| ├─── Env.py                # RL environment
+| ├─── Processing_data.py    # get data information
+| ├─── Test.py               # downstream_model:mlp/svm/LR/NB
+| └─── main.py               
+├─── GEN
+| ├─── GAN.py                # codes of CTGAN
+| ├─── Classifier.py         # choose Weak/Semi classification
+| ├─── Test.py               # downstream_model:mlp/svm/LR/NB
+| └─── main.py 
+├─── LSTM
+| ├─── LSTM.py               # codes of LSTM
+| ├─── Classifier.py         # choose Weak/Semi classification
+| ├─── Test.py               # downstream_model:mlp/svm/LR/NB
+| └─── main.py               
+├─── main.py                 # evaluation of different methods
+├─── README.md
+└─── requirements.txt
+```
 
 <br>
 
