@@ -4,11 +4,11 @@
 <p align="center">
   <a href="#-community">Community</a> •
   <a href="#-struct">Folder Structure</a> •
-  <a href="#-data-and-query">Data and Query</a> •
   <a href="#-getstart">GettingStart</a> •
   <a href="#-quickstart">QuickStart</a> •
   <a href="#-result">Result</a> •
 </p>
+
 
 
 
@@ -121,7 +121,7 @@ LakeBench is easy to use and extend. Going through the bellowing examples will h
 
 ### Train
 
-Here is an example to train Starmie on Webtable with small query. Training other supported algorithms (on other datasets with different query) can be specified by a config file.
+Here is an example to train Starmie on *Webtable*. Training other supported algorithms (on other datasets with different query) can be specified by a config file.
 
 **Step1: Check your environment**
 
@@ -130,19 +130,19 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 **Step2: Pretrain**
 
 ```sh
-python pretrain.py --c config/pretrain/starmie/webtable_small.yaml
+python pretrain.py --c config/pretrain/webtable/starmie.yaml
 ```
 
 **Step3: Indexing**
 
 ```sh
-python index.py --c config/index/starmie/webtable_small.yaml
+python index.py --c config/index/webtable/starmie.yaml
 ```
 
 **Step4: Querying**
 
 ```sh
-python query.py --c config/query/starmie/webtable_small.yaml
+python query.py --c config/query/webtable/starmie.yaml
 ```
 
 If you want to try other algorithms, here are other training steps:
