@@ -47,30 +47,30 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ```
 .
-├─── config                  # setting parameters        
-├─── pic                     # picture of different experiments
-├─── model                   # save model
-├─── Datasets                
-| ├─── original              # original datasets
-| └─── processing            # train_data/val_data/test_data
-├─── RLGen
-| ├─── AC.py                 # framework of RLGen
-| ├─── Classifier.py         # choose Weak/Semi classification
-| ├─── Env.py                # RL environment
-| ├─── Processing_data.py    # get data information
-| ├─── Test.py               # downstream_model:mlp/svm/LR/NB
-| └─── main.py               
-├─── GEN
-| ├─── GAN.py                # codes of CTGAN
-| ├─── Classifier.py         # choose Weak/Semi classification
-| ├─── Test.py               # downstream_model:mlp/svm/LR/NB
-| └─── main.py 
-├─── LSTM
-| ├─── LSTM.py               # codes of LSTM
-| ├─── Classifier.py         # choose Weak/Semi classification
-| ├─── Test.py               # downstream_model:mlp/svm/LR/NB
-| └─── main.py               
-├─── main.py                 # evaluation of different methods
+├─── config                  # setting parameters
+| ├─── pretrain              
+| ├─── index                
+| └─── query                 
+| 
+├─── imgs                    # picture of different experiments
+| 
+├─── join                    # join algorithms                
+| ├─── Joise 
+| ├─── LSH
+| ├─── Pexeso         
+| └─── DeepJoin         
+| 
+├─── union                   # union algorithms                
+| ├─── TUS 
+| ├─── D3L
+| ├─── Santos         
+| └─── Starmie         
+├─── join&union              # algorithms both join and union               
+| ├─── Joise 
+| ├─── LSH
+| ├─── Pexeso         
+| └─── DeepJoin         
+├─── eval.py                 # evaluation of different algorithms
 ├─── README.md
 └─── requirements.txt
 ```
@@ -92,7 +92,7 @@ LakeBench is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
 To insall the required packages, you can create a conda environmennt:
 
 ```sh
-conda create --name usb python=3.8
+conda create --name lakebench python=3.
 ```
 
 then use pip to install -r requirements.txt
@@ -130,19 +130,19 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 **Step2: Pretrain**
 
 ```sh
-python pretrain.py --c config/union/pretrain/starmie/webtable_small.yaml
+python pretrain.py --c config/pretrain/starmie/webtable_small.yaml
 ```
 
 **Step3: Indexing**
 
 ```sh
-python index.py --c config/union/index/starmie/webtable_small.yaml
+python index.py --c config/index/starmie/webtable_small.yaml
 ```
 
 **Step4: Querying**
 
 ```sh
-python query.py --c config/union/query/starmie/webtable_small.yaml
+python query.py --c config/query/starmie/webtable_small.yaml
 ```
 
 If you want to try other algorithms, here are other training steps:
@@ -168,7 +168,7 @@ If you want to try other algorithms, here are other training steps:
 After training, you can check the evaluation performance on training logs, or running evaluation script:
 
 ```sh
-python eval.py --datasets webtable_small --methods starmie --td union
+python eval.py --datasets webtable_small --algo starmie --td union
 ```
 
 <span id="-result"></span>
