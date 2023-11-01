@@ -1,5 +1,5 @@
 <div>
-    <h1>Starmie</h1>
+    <h1>Frt12</h1>
 </div>
 
 
@@ -13,7 +13,7 @@
 ├─── index.py                # Index the columns of tables
 ├─── query.py                # Get the union results                         
 ├─── hnsw_search.py     
-└─── starmie.md
+└─── frt.md
 ```
 
 <br>
@@ -28,26 +28,25 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 
 ```sh
 #webtable
-python pretrain.py --c config/pretrain/webtable/starmie.yaml
+python pretrain.py --c config/pretrain/webtable/frt.yaml
 #opendata
-python pretrain.py --c config/pretrain/opendata/starmie.yaml
+python pretrain.py --c config/pretrain/opendata/frt.yaml
 ```
 
 **Step3: Indexing**
 
 ```sh
 #webtable
-python index.py --c config/index/webtable/starmie.yaml
+python index.py --c config/index/webtable/frt.yaml
 #opendata
-python index.py --c config/index/opendata/starmie.yaml
+python index.py --c config/index/opendata/frt.yaml
 ```
 
 **Step4: Querying**
 
 ```sh
 #webtable
-python query.py --c config/query/webtable/starmie.yaml
+python query.py --c config/query/webtable/frt.yaml
 #opendata
-python query.py --c config/query/opendata/starmie.yaml
+python query.py --c config/query/opendata/frt.yaml
 ```
-
