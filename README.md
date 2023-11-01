@@ -41,7 +41,7 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 <span id="-struct"></span>
 
-## 🏆 Folder Structure
+## 📧 Folder Structure
 
 
 
@@ -65,7 +65,7 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 | ├─── D3L
 | ├─── Santos         
 | └─── Starmie         
-├─── join&union              # algorithms both join and union               
+├─── join&union              # join&union algorithms               
 | ├─── Joise 
 | ├─── LSH
 | ├─── Pexeso         
@@ -115,7 +115,7 @@ The detailed instructions for downloading and processing are shown in [Dataset D
 
 <span id="-quickstart"></span>
 
-## 🐳  Quick Start
+## 🐠 Quick Start
 
 LakeBench is easy to use and extend. Going through the bellowing examples will help you familiar with LakeBench for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
@@ -175,7 +175,7 @@ python eval.py --datasets webtable_small --algo starmie --td union
 
 <br>
 
-##  📧 Results
+##  🏆  Results
 
 
 
@@ -194,5 +194,3 @@ Efficiency and Memory Usage of Table Union Search:
 <div align="center">
 <img src="imgs/table2.png" width="1000px">
 </div>
-
-Note that for larger datasets like WebTable, please make sure enough memory is allocated. 
