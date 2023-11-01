@@ -121,7 +121,7 @@ LakeBench is easy to use and extend. Going through the bellowing examples will h
 
 ### Train
 
-Here is an example to train Starmie on *Webtable*. Training other supported algorithms (on other datasets with different query) can be specified by a config file.
+Here is an example to train Starmie on *Webtable*. Training other supported algorithms (on other datasets with different query) can be specified by the <a href = "-table">table</a> below.
 
 **Step1: Check your environment**
 
@@ -145,7 +145,9 @@ python index.py --c config/index/webtable/starmie.yaml
 python query.py --c config/query/webtable/starmie.yaml
 ```
 
-If you want to try other algorithms, here are other training steps:
+If you want to try other algorithms, you can read more details according :
+
+<div id="-table"></div>
 
 |                 Algorithms                  |     Task     |                            Train                             |
 | :-----------------------------------------: | :----------: | :----------------------------------------------------------: |
