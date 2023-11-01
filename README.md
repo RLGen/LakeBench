@@ -120,7 +120,7 @@ If you want to try other algorithms, here are other training steps:
 |                 Algorithms                  |     Task     |                            Train                             |
 | :-----------------------------------------: | :----------: | :----------------------------------------------------------: |
 |        [Joise](join/Joise/joise.md)         |     Join     |         [./join/Joise/joise.md](join/Joise/joise.md)         |
-|  [LSH Ensemble](join/LSH Ensemble/lsh.md)   |     Join     |    [./join/LSH Ensemble/lsh.md](join/LSH Ensemble/lsh.md)    |
+|       [LSH Ensemble](join/LSH/lsh.md)       |     Join     |             [./join/LSH/lsh.md](join/LSH/lsh.md)             |
 |       [Pexeso](join/Pexeso/pexeso.md)       |     Join     |       [./join/Pexeso/pexeso.md](join/Pexeso/pexeso.md)       |
 |    [DeepJoin](join/Deepjoin/deepjoin.md)    |     Join     |   [./join/Deepjoin/deepjoin.md](join/Deepjoin/deepjoin.md)   |
 |           [TUS](union/TUS/tus.md)           |    Union     |            [./union/TUS/tus.md](union/TUS/tus.md)            |
