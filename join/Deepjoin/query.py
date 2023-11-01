@@ -13,7 +13,7 @@ from tqdm import tqdm
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--encoder", type=str, default="cl", choices=['sherlock', 'starmie', 'cl', 'tapex'])
+    parser.add_argument("--encoder", type=str, default="cl", choices=['sherlock', 'deepjoin', 'cl', 'tapex'])
     parser.add_argument("--benchmark", type=str, default='test')
     parser.add_argument("--run_id", type=int, default=0)
     parser.add_argument("--single_column", dest="single_column", action="store_true", default=False)
@@ -48,9 +48,9 @@ if __name__ == '__main__':
     singSampAug = "drop_col,sample_row_head"
 
     table_id = hp.run_id
-    table_path = "/data/final_result/starmie/"+dataFolder+"/"+dataFolder+"_small_with_query.pkl"
-    query_path = "/data/final_result/starmie/"+dataFolder+"/"+dataFolder+"_small_query.pkl"
-    index_path = "/data/final_result/starmie/"+dataFolder+"/hnsw_opendata_small_"+str(table_id)+"_"+str(hp.scal)+".bin"
+    table_path = "/data/final_result/deepjoin/"+dataFolder+"/"+dataFolder+"_small_with_query.pkl"
+    query_path = "/data/final_result/deepjoin/"+dataFolder+"/"+dataFolder+"_small_query.pkl"
+    index_path = "/data/final_result/deepjoin/"+dataFolder+"/hnsw_opendata_small_"+str(table_id)+"_"+str(hp.scal)+".bin"
 
     # Call HNSWSearcher from hnsw_search.py
     searcher = HNSWSearcher(table_path, index_path, hp.scal)
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         dic[str_q].append(qu)
 
 
-path_output = '/data/final_result/starmie/'+dataFolder+'/result/small/hnsw_' + str(K) + '_' + str(N) + '_' + str(threshold) + '.csv'
+path_output = '/data/final_result/deepjoin/'+dataFolder+'/result/small/hnsw_' + str(K) + '_' + str(N) + '_' + str(threshold) + '.csv'
 if os.path.exists(path_output):
      os.remove(path_output)
 

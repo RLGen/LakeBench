@@ -57,4 +57,3 @@ python index.py --benchmark webtable
 ```sh
 python query.py --benchmark webtable --K 5 --N 10 --threshold 0.7
 ```
-
