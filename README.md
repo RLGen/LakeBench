@@ -79,8 +79,6 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 
 
-
-
 <span id="-getstart"></span>
 
 ## 🐳 Getting Started
@@ -112,6 +110,8 @@ python test.py
 ### Prepare Datasets
 
 The detailed instructions for downloading and processing are shown in [Dataset Download](./preprocess/). Please follow it to download datasets before running or developing algorithms.
+
+<br>
 
 <span id="-quickstart"></span>
 
@@ -173,6 +173,8 @@ python eval.py --datasets webtable_small --methods starmie --td union
 
 <span id="-result"></span>
 
+<br>
+
 ##  📧 Results
 
 
@@ -184,7 +186,7 @@ Efficiency and Memory Usage of Table Join Search:
 <div align="center">
 <img src="imgs/table1.png" width="1000px">
 </div>
-
+<br>
 
 
 Efficiency and Memory Usage of Table Union Search:
