@@ -26,19 +26,27 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 
 **Step2: Indexing**
 
+> -- root_path [Data path to be indexed, str]
+>
+> --name_file  --format_file --value_file --embdding_file --distriution_file [Created index file, str]
+
 ```sh
-#webtable
-python index.py --c config/index/webtable/d3l.yaml
-#opendata
-python index.py --c config/index/opendata/d3l.yaml
+python indexing.py --root_path "/data/webtable/large/" --name_file "name.lsh" --format_file "format.lsh" --value_file "value.lsh" --embedding_file "embedding.lsh" --distribution_file "distribution.lsh"
 ```
 
 **Step3: Querying**
 
+> --output_folder [Path to store query results, str]
+>
+> --combined_file_path [Path to store final results, str]
+>
+> --K [top-$k$, int]
+>
+> --split_num [Number of processes in multiple processes, int]
+>
+> --name_index_file  --format_index_file --value_index_file --embdding_index_file --distriution_index_file [Created index file, str]
+
 ```sh
-#webtable
-python query.py --c config/query/webtable/d3l.yaml
-#opendata
-python query.py --c config/query/opendata/d3l.yaml
+python query.py --output_folder "test" --combined_file_path "test.csv" --k 10 --split_num 10 --query_tables_folder "/data/webtable/small/" --name_index_file "name.lsh" --format_index_file "format.lsh" --value_index_file "value.lsh" --embedding_index_file "embedding.lsh" --distribution_index_file "distribution.lsh"
 ```
 

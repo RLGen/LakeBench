@@ -28,7 +28,7 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 
 Here are some parameters:
 
-> -- task [choose task, str] [opendata, opendata_large, webtable, webtable_large]
+> -- task [Choose task, str] [opendata, opendata_large, webtable, webtable_large]
 
 ```sh
 python pretrain.py --task webtable
@@ -38,7 +38,7 @@ python pretrain.py --task webtable
 
 Here are some parameters:
 
-> --benchmark [choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
+> --benchmark [Choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
 
 ```sh
 python index.py --benchmark webtable
@@ -46,13 +46,13 @@ python index.py --benchmark webtable
 
 **Step4: Querying**
 
-> --benchmark [choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
+> --benchmark [Choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
 >
-> --K [choose top-$k$ ,int] [5~30]
+> --K [Choose top-$k$ ,int] [5~60]
 >
-> --threshold [choose threshold, float] [0.5~0.9]
+> --threshold [Choose threshold, float] [0.5~1.0]
 >
-> --N [choose N, int] [4, 10, 16, 25, 50]
+> --N [Choose N, int] [4, 10, 16, 25, 50]
 
 ```sh
 python query.py --benchmark webtable --K 5 --N 10 --threshold 0.7
