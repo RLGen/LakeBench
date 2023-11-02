@@ -48,7 +48,7 @@ python index.py --benchmark webtable
 
 > --benchmark [Choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
 >
-> --K [Choose top-$k$ ,int] [5~60]
+> --K [Choose top-*k* ,int] [5~60]
 >
 > --threshold [Choose threshold, float] [0.5~1.0]
 >
