@@ -40,7 +40,7 @@ python indexing.py --root_path "/data/webtable/large/" --name_file "name.lsh" --
 >
 > --combined_file_path [Path to store final results, str]
 >
-> --K [top-$k$, int]
+> --K [top-*k*, int]
 >
 > --split_num [Number of processes in multiple processes, int]
 >
