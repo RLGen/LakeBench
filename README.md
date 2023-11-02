@@ -47,13 +47,7 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ```
 .
-├─── config                  # setting parameters
-| ├─── pretrain              
-| ├─── index                
-| └─── query                 
-| 
 ├─── imgs                    # picture of different experiments
-| 
 ├─── join                    # join algorithms                
 | ├─── Joise 
 | ├─── LSH
@@ -64,12 +58,14 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 | ├─── TUS 
 | ├─── D3L
 | ├─── Santos         
-| └─── Starmie         
+| └─── Starmie  
+| 
 ├─── join&union              # join&union algorithms               
 | ├─── Joise 
 | ├─── LSH
 | ├─── Pexeso         
-| └─── DeepJoin         
+| └─── DeepJoin 
+| 
 ├─── eval.py                 # evaluation of different algorithms
 ├─── README.md
 └─── requirements.txt
