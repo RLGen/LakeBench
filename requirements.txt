@@ -21,3 +21,12 @@ SQLAlchemy>=1.3.23
 mmh3>=3.0.0
 nltk>=3.5
 scikit-learn>=0.24.1
+cython
+fairseq==0.8.0
+Torch-scatter==1.3.2
+h5py
+"--editable=git+https://github.com/huggingface/transformers.git@372a5c1ceec49b52c503707e9657bfaae7c236a0#egg=pytorch_pretrained_bert"
+redis
+pyzmq
+ujson
+msgpack

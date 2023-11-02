@@ -12,6 +12,7 @@ from torch import nn
 from tqdm import tqdm
 from transformers import *
 import logging as log
+import argparse
 
 
 class Table:
@@ -130,16 +131,28 @@ def get_now_str() -> str:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_path", type=str, default=None)
+    parser.add_argument("--benchmark", type=str, default='test')
+    parser.add_argument("file_type", type='str', default='.csv')
+    
+
+    hp = parser.parse_args()
+    dataFolder = hp.benchmark
+    if 'large' in dataFolder:
+        x = 'large'
+    else:
+        x = 'small'
     numpy.set_printoptions(suppress=True)
-    TABERT_MODEL_PATH = '/home/caoziqi/code/nlp-TaBERT-finetune-main/tabert_base_k3/model.bin'
+    TABERT_MODEL_PATH = hp.model_path
     BERT_MODEL = 'bert-base-uncased'
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     # >   Etc
-    FILE_PATH = '/data_ssd/webtable/large/large_query/'
-    FILE_TYPE = ".csv"
-    OUTPUT_PATH = "/data/data/czq/query/webtable_large"
-    LOG_PATH = "/data/data/czq/query/webtable_large"
+    FILE_PATH = '/data_ssd/webtable/'+x+'/'+x+'_query/'
+    FILE_TYPE = hp.file_type
+    OUTPUT_PATH = "/data/" + dataFolder
+    LOG_PATH = "/data/" + dataFolder
     DEBUG = False
     BATCH = 2
     # Config Area END_________________
