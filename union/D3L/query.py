@@ -41,22 +41,20 @@ def sub_process(query_tables, queue, output_folder, qe, dataloader, k_value):
         results_file = os.path.join(output_folder, f"{table_name}.csv")
 
         if os.path.exists(results_file):
-            print(f"跳过查询表 {i + 1}，因为结果文件已经存在：{results_file}")
-            queue.put(1)  # 在队列中放入一个占位符值
+            print(f"Skip query table {i + 1}. Because the result file already exists:{results_file}")
+            queue.put(1)  
             continue
 
-        # 执行查询
+        # querying
         results, extended_results = qe.table_query(table=dataloader.read_table(table_name=table_name),
                                                    aggregator=None, k=k_value, verbose=True)
 
-        # 创建一个新的 CSV 文件
         with open(results_file, mode='w', newline='') as csvfile:
             writer = csv.writer(csvfile)
 
             # Write the header
             writer.writerow(['query_table', 'candidate_table', 'query_col_name', 'candidate_col_name'])
 
-            # 写入查询结果到 CSV 文件
             for result in extended_results:
                 query_table = table_name
                 candidate_table = os.path.basename(result[0])
@@ -186,4 +184,4 @@ if __name__ == "__main__":
     run_time = end_time - start_time
 
     # Print the run time
-    print(f"程序运行时间：{run_time} 秒")
+    print(f"Running Time:{run_time} s")

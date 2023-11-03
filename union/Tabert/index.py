@@ -78,7 +78,7 @@ def get_now() -> str:
 
 
 def csv_to_list(csv_file, table_name) -> [List]:
-    # 读取 CSV 文件并转换为 DataFrame
+    # Read CSV file and convert to DataFrame
     table_pos_list = []
     data_source = pd.read_csv(csv_file, nrows=5, index_col=None)
     column_names = data_source.columns.tolist()
@@ -108,19 +108,19 @@ def csv_to_list(csv_file, table_name) -> [List]:
 
 
 def convert_all_csv_to_jsonl(folder_path, output_path):
-    # 获取文件夹内所有CSV文件的路径
+    # Get the paths of all CSV files in a folder
     file_paths = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith('.csv')]
     total_file_num = len(file_paths);
     current_index = 1;
 
-    # 遍历每个 .csv 文件并进行转换，并将结果写入 .jsonl 文件
+    # Iterate through each .csv file and convert it, writing the results to a .json file
     with open(output_path, 'w') as jsonl_file:
         for csv_file in file_paths:
-            table_name = os.path.splitext(os.path.basename(csv_file))[0]  # 提取表名，即去除后缀名的文件名
+            table_name = os.path.splitext(os.path.basename(csv_file))[0]  
             print(table_name)
             json_data = csv_to_list(csv_file, table_name)
             json.dump(json_data, jsonl_file)
-            jsonl_file.write('\n')  # 每个 JSON 数据占据一行
+            jsonl_file.write('\n')  
             print('当前进度' + str(current_index) + '/' + str(total_file_num))
             current_index = current_index + 1
 
@@ -161,28 +161,23 @@ if __name__ == "__main__":
     tokenizer = BertTokenizer.from_pretrained(BERT_MODEL)
     model = Model()
     model.to(device)
-    model.eval()  # 设置模型为评估模式
+    model.eval() 
     LOG_FILE = LOG_PATH + get_now_str() + ".log"
     BATCH_SIZE = 3000
     # read csv file
     file_paths = [os.path.join(FILE_PATH, file) for file in os.listdir(FILE_PATH) if file.endswith(FILE_TYPE.lower())]
     total_file_num = len(file_paths)
     current_index = 1
-    # 遍历每个 .csv 文件并进行转换，并将结果写入 .jsonl 文件
     index = 0
     w_index = 0
     with open(LOG_FILE, 'a') as logfile:
         dataEmbeds = []
         for csv_file in tqdm(file_paths):
             logfile.write(get_now() + ":start read csv_file.\n")
-            # 提取表名，即去除后缀名的文件名
             table_name = os.path.splitext(os.path.basename(csv_file))[0]
-            # 处理csv文件
             tablePosList = csv_to_list(csv_file, table_name)
             trainDataset = build_dataset_predict(tablePosList, tokenizer, model.Tmodel)
-            # 写入.txt文件
             log('i', f"Total Train Data set Cnt : {len(trainDataset)}")
-            # 将文件写入到指定文件夹
             with torch.no_grad():  # Disable gradient calculation for inference
                 for tp_table, tp_context in trainDataset:
                     q_tp_embedding = model(tp_table, tp_context)
