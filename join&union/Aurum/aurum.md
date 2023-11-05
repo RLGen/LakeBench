@@ -9,42 +9,31 @@
 
 ```
 .
-├─── pretrain.py             # Pretrain
-├─── index.py                # Index the columns of tables
-├─── query.py                # Get the union results                         
+├─── build_hash.py             # build the minhash of each column
+├─── query.py                  # Get the union results                         
 ├─── hnsw_search.py     
 └─── aurum.md
 ```
 
 <br>
 
-<h2>Training Steps</h2>
+<h2>Quik Start</h2>
 
 **Step1: Check your environment**
 
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
+You need to properly install python package first. Please check package you have installed via `pip list`
 
-**Step2: Pretrain**
+**Step2: build minhash**
 
 Here are some parameters:
 
 > -- task [choose task, str] [opendata, opendata_large, webtable, webtable_large]
 
 ```sh
-python pretrain.py --task webtable
+python build_hash.py --task webtable
 ```
 
-**Step3: Indexing**
-
-Here are some parameters:
-
-> --benchmark [choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
-
-```sh
-python index.py --benchmark webtable
-```
-
-**Step4: Querying**
+**Step3: Querying**
 
 > --benchmark [choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
 >
