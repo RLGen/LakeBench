@@ -8,45 +8,40 @@
 
 ```
 .
-├─── pretrain.py             # Pretrain
-├─── index.py                # Index the columns of tables
-├─── query.py                # Get the union results                         
-├─── hnsw_search.py     
+├─── Uset.py                # create Uset minhashLsh
+├─── Usem.py                # create Usem minhashLsh
+├─── Unl.py                 # create Unl min ha shLSH                         
+├─── main.py     
 └─── tus.md
 ```
 
 <br>
 
-<h2>Training Steps</h2>
+<h2>Quick Start</h2>
 
-**Step1: Check your environment**
-
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
-
-**Step2: Pretrain**
+**Step1: create Uset minhashLsh**
 
 ```sh
-#webtable
-python pretrain.py --c config/pretrain/webtable/tus.yaml
-#opendata
-python pretrain.py --c config/pretrain/opendata/tus.yaml
+python Uset.py
 ```
 
-**Step3: Indexing**
+**Step2: create Usem minhashLsh**
 
 ```sh
-#webtable
-python index.py --c config/index/webtable/tus.yaml
-#opendata
-python index.py --c config/index/opendata/tus.yaml
+python Usem.py
+```
+
+**Step3: create Unl min ha shLSH**
+
+```sh
+python Unl.py
 ```
 
 **Step4: Querying**
 
 ```sh
-#webtable
-python query.py --c config/query/webtable/tus.yaml
-#opendata
-python query.py --c config/query/opendata/tus.yaml
+python main.py
 ```
+
+
 
