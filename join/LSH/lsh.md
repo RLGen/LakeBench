@@ -3,50 +3,77 @@
 </div>
 
 
-<br>
-
-<h2>Folder Structure</h2>
-
-```
-.
-├─── pretrain.py             # Pretrain
-├─── index.py                # Index the columns of tables
-├─── query.py                # Get the union results                         
-├─── hnsw_search.py     
-└─── lsh.md
-```
-
-<br>
-
-<h2>Training Steps</h2>
+<h2>Quik Start</h2>
 
 **Step1: Check your environment**
 
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
+You need to properly install python package first. Please check package you have installed via `pip list`
 
-**Step2: Pretrain**
-
-```sh
-#webtable
-python pretrain.py --c config/pretrain/webtable/lsh.yaml
-#opendata
-python pretrain.py --c config/pretrain/opendata/lsh.yaml
-```
-
-**Step3: Indexing**
+**Step2: Runing**
 
 ```sh
 #webtable
-python index.py --c config/index/webtable/lsh.yaml
+python LSH_benchmark_ws.py
 #opendata
-python index.py --c config/index/opendata/lsh.yaml
+python LSH_benchmark_os.py
 ```
 
-**Step4: Querying**
+**Step3: Output**
 
-```sh
-#webtable
-python query.py --c config/query/webtable/lsh.yaml
-#opendata
-python query.py --c config/query/opendata/lsh.yaml
-```
+Automatically check if the index has been generated. If it is complete, start querying and output the result file to the path of `storage_path`.
+
+
+### functional module
+
+##### LSH Ensemble\datasketch\lsh.py:  
+
+Implementation code for MinHashLSH class
+
+##### LSH Ensemble\datasketch\minhash.py: 
+
+Implementation code for Minhash class
+
+##### LSH Ensemble\datasketch\storage.py: 
+
+LSHensemble's underlying storage related
+
+##### LSH Ensemble\datasketch\lshensemble.py: 
+
+Implementation code for MinHashLSHEnsemble class
+
+**Main functions**
+
+Initialization: Load parameters. Input - Containment threshold, num_ Perm, num_ Part, m, weights
+
+index: Indexing, only called once. Input - The candidate set represented by the list of (key, minhash, size)
+
+query: Conduct a query. Input: minhash and size of the query set
+
+##### LSH Ensemble\datasketch\lshensemble_partition.py
+
+Functional module for calculating optimal partition
+
+##### LSH Ensemble\lshensemble_benchmark.py
+
+This section is the program entry, and when executed with the parameter level test/lite, the corresponding parameter set can be used. The parameter set is set in the code.
+
+
+### Parameter settings
+
+threshold: Containment threshold Value range[0.0, 1.0].
+
+num_perm: The number of permutation functions used in Minhash.
+
+num_part: the number of partitions of LSH Ensemble.
+
+m: LSH Ensemble uses approximately m times more memory space than the same number of MinHash LSHs. In addition, the larger the m, the higher the accuracy.
+
+weights: When optimizing parameter settings, balance the importance of fp and fn.
+
+### Output files and intermediate files
+
+index.pickle, query.pickle: Intermediate file, which preprocesses the input index and query data into (key, minhash, size) format for storage.
+
+lshensemble_benchmark_query_results.csv: Output file, including precision recall and time.
+
+1.0-16-256-match.csv: Output file, displaying matching column pairs in the given format.
