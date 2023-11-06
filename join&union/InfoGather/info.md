@@ -5,7 +5,6 @@ Paper：InfoGather- Entity Augmentation and Attribute Discovery By Holistic Matc
 
 # offline:
 python join_creatofflineIndex_webtable_opendata.py 
-location：13022 /home/lijiajun/infogather/
 
 script: join_creatofflineIndex_webtable_opendata.py  
 run commond: python join_creatofflineIndex_webtable_opendata.py
