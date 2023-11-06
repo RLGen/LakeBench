@@ -7,11 +7,13 @@
 **Step1: offline**
 
 ***input***
+
 ① Yago_ File_ Path (a dictionary that stores entity labels)
 ② Candidate_ Folder_ Path (candidate table folder path)
 ③ Query_ Folder_ Path (query table folder path)
 
 ***output***
+
 ① Location:~/offline_ All/
 ② Result:
 1) Candidate_ Label_ Value.pkl (label weight of all candidate tables)
@@ -25,6 +27,7 @@
 **Step2: online**
 
 ***union***
+
 (1) File location:~/online_ Process/all_ Entity_ Completion. py
 
 (2) Input:
@@ -43,6 +46,7 @@
 Note that the table contains the name of each candidate table and the union table name of the top k found in the query
 
 ***join***
+
 (1) File location:~/online_ Process/all_ Schema_ Completion. py
 
 (2) Input:
