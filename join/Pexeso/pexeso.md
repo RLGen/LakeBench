@@ -18,11 +18,11 @@
 
 <br>
 
-<h2>Training Steps</h2>
+<h2>Quik Start</h2>
 
 **Step1: Check your environment**
 
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
+You need to properly install python package first. Please check package you have installed via `pip list`
 
 **Step2: Pretrain**
 

@@ -3,37 +3,23 @@
 </div>
 
 
-<br>
+<h2>Quick Start</h2>
 
-<h2>Folder Structure</h2>
+**Step1: offline**
 
-```
-.
-├─── pretrain.py             # Pretrain
-├─── index.py                # Index the columns of tables
-├─── query.py                # Get the union results                         
-├─── hnsw_search.py     
-└─── joise.md
-```
+#### parameters：
+cpath: string,path of data lake
+save_root: string, save path of the index file created in this step
+#### modules:
+createRawTokens.py: Read all the files in the data lake and store them in save_root/rawTokens.csv. Assign a setID to each candidate column and store the corresponding relationship in save_root/setMap.pkl
+createIndex.py:Create an inverted index based on rawTokens.csv, and save the results in save_root/outputs/.
 
-<br>
-
-<h2>Training Steps</h2>
-
-**Step1: Check your environment**
-
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
-
-**Step2: Pretrain**
 
 ```sh
-#webtable
-python pretrain.py --c config/pretrain/webtable/joise.yaml
-#opendata
-python pretrain.py --c config/pretrain/opendata/joise.yaml
+python offline/offline_api.py --cpath --save_root
 ```
 
-**Step3: Indexing**
+**Step2: online**
 
 ```sh
 #webtable
@@ -44,9 +30,19 @@ python index.py --c config/index/opendata/joise.yaml
 
 **Step4: Querying**
 
+#### parameters：
+qpath: string,path of all query tables
+save_root: string,path of index
+result_root：string,path of query results
+k:int, find top-k sets that have the largest intersection with query
+#### modules:
+cost.py: Functions that calculate  the cost of reading sets or posting lists.
+heap.py: Operations related to the heap that stores the top k results.
+josie.py: Joise algorithm
+josie_util.py:Operations related to joise algorithm.
+data_process.py:Data processing functions needed when creating the index.
+common.py: Other functions
+
 ```sh
-#webtable
-python query.py --c config/query/webtable/joise.yaml
-#opendata
-python query.py --c config/query/opendata/joise.yaml
+python online/online_api.py --cpath --save_root --result_root --k
 ```
