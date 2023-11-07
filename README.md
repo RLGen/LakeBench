@@ -105,9 +105,16 @@ python test.py
 
 ### Prepare Datasets
 
-The detailed instructions for downloading and processing are shown in [Dataset Download](./preprocess/). Please follow it to download datasets before running or developing algorithms.
+The detailed instructions for downloading and processing are shown in <a href = "#-table_dataset">table</a> below. Please follow it to download datasets before running or developing algorithms.
 
-<br>
+<div id="-table_dataset"></div> 
+
+|                 Datasets                    | 
+| :-----------------------------------------: |
+|        [WebTable](https://drive.google.com/file/d/1tnI2EyrYHlc3fpv0SSMoe2sqWQZoOEjg/view?usp=sharing)     | 
+|       [OpenData_SG 、 OpenData_CAN](https://drive.google.com/drive/folders/1bCcNqee-sjvtjxDgzVxyCLYDa5fI5vFK?usp=sharing)       |      
+|       [Pexeso](join/Pexeso/pexeso.md)       |      
+|    [DeepJoin](join/Deepjoin/deepjoin.md)    |   
 
 <span id="-quickstart"></span>
 
