@@ -8,7 +8,7 @@
 
 ```
 .
-├─── index.py                # Index the columns of tables
+├─── indexing.py                # Index the columns of tables
 ├─── query.py                # Get the union results
 ├─── find.py 
 ├─── merge.py
