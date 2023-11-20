@@ -66,7 +66,6 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 | ├─── Pexeso         
 | └─── DeepJoin 
 | 
-├─── eval.py                 # evaluation of different algorithms
 ├─── README.md
 └─── requirements.txt
 ```
@@ -167,14 +166,6 @@ If you want to try other algorithms, you can read more details according to the 
 |     [Aurum](join&union/Aurum/aurum.md)      | Join & Union |   [./join&union/Aurum/aurum.md](join&union/Aurum/aurum.md)   |
 
 
-
-### Evalution
-
-After training, you can check the evaluation performance on training logs, or running evaluation script:
-
-```sh
-python eval.py --datasets webtable_small --algo starmie --td union
-```
 
 <span id="-result"></span>
 
