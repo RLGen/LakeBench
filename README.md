@@ -150,7 +150,6 @@ python query.py --benchmark webtable --K 5 --N 10 --threshold 0.7
 If you want to try other algorithms, you can read more details according to the table:
 
 <div id="-table"></div> 
-
 |                 Algorithms                  |     Task     |                            Train                             |
 | :-----------------------------------------: | :----------: | :----------------------------------------------------------: |
 |        [Joise](join/Joise/joise.md)         |     Join     |         [./join/Joise/joise.md](join/Joise/joise.md)         |
