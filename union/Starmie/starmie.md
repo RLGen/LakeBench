@@ -3,6 +3,7 @@
 </div>
 
 
+![The overall architecture of Starmie](starmie_overall.jpg)
 <br>
 
 <h2>Folder Structure</h2>
