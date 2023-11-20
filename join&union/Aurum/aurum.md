@@ -2,7 +2,9 @@
     <h1>Aurum</h1>
 </div>
 
+# Semantics-aware Dataset Discovery from Data Lakes with Contextualized Column-based Representation Learning
 
+![The overall architecture of Aurum](overview.png)
 <br>
 
 <h2>Folder Structure</h2>

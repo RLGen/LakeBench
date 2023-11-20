@@ -29,7 +29,7 @@
 
 ## Step2: online
 
-### union
+### union search
 
 (1) File location:~/online_ Process/all_ Entity_ Completion. py
 
@@ -55,7 +55,7 @@
 
 Note that the table contains the name of each candidate table and the union table name of the top k found in the query
 
-### join
+### join search
 
 (1) File location:~/online_Process/all_Schema_Completion. py
 
