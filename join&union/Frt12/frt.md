@@ -4,9 +4,9 @@
 
 <h2>Quick Start</h2>
 
-**Step1: offline**
+## Step1: offline
 
-***input***
+### input
 
 ① `Yago_ File_ Path` (a dictionary that stores entity labels)
 
@@ -14,7 +14,7 @@
 
 ③ `Query_Folder_Path` (query table folder path)
 
-***output***
+### output
 
 ① Location:~/offline_ All/
 
@@ -27,9 +27,9 @@
 6) `One_ATT_Freq.pkl` (frequency of each attribute appearing in all candidate tables)
 7) `Two_ATT_Freq.pkl` (the frequency at which two attributes that appear in any candidate table appear in all candidate tables)
 
-**Step2: online**
+## Step2: online
 
-***union***
+### union
 
 (1) File location:~/online_ Process/all_ Entity_ Completion. py
 
@@ -55,7 +55,7 @@
 
 Note that the table contains the name of each candidate table and the union table name of the top k found in the query
 
-***join***
+### join
 
 (1) File location:~/online_Process/all_Schema_Completion. py
 
