@@ -2,7 +2,7 @@
     <h1>Aurum</h1>
 </div>
 
-
+![The overall architecture of Aurum](overview.png)
 <br>
 
 <h2>Folder Structure</h2>
