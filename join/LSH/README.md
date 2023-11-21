@@ -50,6 +50,4 @@ weights：在优化参数设定时，对fp和fn重要性的权衡考量。
 
 index.pickle，query.pickle：中间文件，将输入的索引和查询数据预处理为(key, minhash, size)的形式存储。
 
-lshensemble_benchmark_query_results.csv：输出文件，包含精度召回以及时间。
-
-1.0-16-256-match.csv：输出文件，按给定格式展示可匹配的column对。
+Lsh_results_xx：输出文件夹，包含topk结果的csv文件。

@@ -74,6 +74,4 @@ weights: When optimizing parameter settings, balance the importance of fp and fn
 
 index.pickle, query.pickle: Intermediate file, which preprocesses the input index and query data into (key, minhash, size) format for storage.
 
-lshensemble_benchmark_query_results.csv: Output file, including precision recall and time.
-
-1.0-16-256-match.csv: Output file, displaying matching column pairs in the given format.
+Lsh_results_xx: output folder containing csv files of topk results.

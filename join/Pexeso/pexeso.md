@@ -21,3 +21,38 @@ python PEXESO_benchmark_os.py
 
 Automatically check if the index has been generated. If it is complete, start querying and output the result file to the path of `storage_path`.
 
+### functional module
+
+##### Pexeso\block_and_verify.py： 
+
+Block and verify and citation implementation in thesis
+
+##### Pexeso\Hierarchical_Grid.py：
+
+Implementation code for the hierarchical grid class in the index
+
+##### Pexeso\Pivot_Metric.py：
+
+Selection of pivot algorithm code
+
+##### Pexeso\inverted_index.py：
+
+Implementation code for the inverted index class in Index
+
+### 参数设置
+
+k：Number of pivots
+
+n_layers：The number of layers of the hierarchical grid index.
+
+tao：Distance threshold
+
+T：Column joinability threshold
+
+n_dims：Dimension of the embedding
+
+### 输出文件及中间文件
+
+dic_xx.pickle：Intermediate files, which preprocess the input data into embedding form, select pivots and map them, store the preprocessed data; and save the generated indexes. 
+
+Pe_results_xx: Output folder containing csv files of topk results.
