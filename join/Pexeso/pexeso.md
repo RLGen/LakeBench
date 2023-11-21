@@ -1,6 +1,7 @@
 <div>
     <h1>Pexeso</h1>
 </div>
+![image-20231121160556291](C:\Users\w2306\AppData\Roaming\Typora\typora-user-images\image-20231121160556291.png)
 
 <h2>Quik Start</h2>
 
@@ -39,7 +40,7 @@ Selection of pivot algorithm code
 
 Implementation code for the inverted index class in Index
 
-### 参数设置
+### Parameter settings
 
 k：Number of pivots
 
@@ -51,7 +52,7 @@ T：Column joinability threshold
 
 n_dims：Dimension of the embedding
 
-### 输出文件及中间文件
+### Output files and intermediate files
 
 dic_xx.pickle：Intermediate files, which preprocess the input data into embedding form, select pivots and map them, store the preprocessed data; and save the generated indexes. 
 
