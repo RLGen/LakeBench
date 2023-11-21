@@ -1,7 +1,9 @@
 <div>
     <h1>Pexeso</h1>
 </div>
-![image-20231121160556291](C:\Users\w2306\AppData\Roaming\Typora\typora-user-images\image-20231121160556291.png)
+<div align="center">
+<img src="imgs/Pexeso.png" width="1000px">
+</div>
 
 <h2>Quik Start</h2>
 
