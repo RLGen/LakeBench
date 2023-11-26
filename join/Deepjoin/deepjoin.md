@@ -66,12 +66,12 @@ This is an example of how to set up deepjoin locally. To get a local copy up, ru
 
 ### Prerequisites
 
-LakeBench is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
+Deepjoin is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
 
 To insall the required packages, you can create a conda environmennt:
 
 ```sh
-conda create --name lakebench python=3.
+conda create --name deepjoin_env python=3.
 ```
 
 then use pip to install -r requirements.txt
@@ -85,7 +85,7 @@ pip install -r requirements.txt
 
 ## 🐠 Quick Start
 
-LakeBench is easy to use and extend. Going through the bellowing examples will help you familiar with LakeBench for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
+Deepjoin is easy to use and extend. Going through the bellowing examples will help you familiar with Deepjoin for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 **Step1: Check your environment**
 
