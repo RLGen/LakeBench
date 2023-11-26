@@ -15,7 +15,7 @@
 <br>
 
 <div align="center">
-<img src="img/deepjoin.png" width="1000px">
+<img src="img/deepjoin.jpg" width="1000px">
 </div>
 <br>
 
