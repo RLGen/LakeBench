@@ -40,27 +40,18 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ```
 .
-├─── imgs                    # picture of different experiments
-├─── join                    # join algorithms                
-| ├─── Joise 
-| ├─── LSH
-| ├─── Pexeso         
-| └─── DeepJoin         
+├─── img                    # picture of different experiments
+├─── all-mpnet-base-v2      #model name because this file is too large  it is not uploaded ,but you can download it from    https://huggingface.co/sentence-transformers/all-mpnet-base-v2                     
 | 
-├─── union                   # union algorithms                
-| ├─── TUS 
-| ├─── D3L
-| ├─── Santos         
-| └─── Starmie  
+├─── datapreocess           # process data                
+| ├─── dataset_to_sentences.py 
+| ├─── multi_process_csv.py
+| ├─── process_table_tosentence.py         
+|   
 | 
-├─── join&union              # join&union algorithms               
-| ├─── Joise 
-| ├─── LSH
-| ├─── Pexeso         
-| └─── DeepJoin 
-| 
-├─── README.md
-└─── requirements.txt
+├─── join             # join algorithms               
+| ├─── deepjoin_train.py
+| ├─── deepjoin_infer.py
 ```
 
 <br>
