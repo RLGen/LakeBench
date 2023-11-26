@@ -62,7 +62,7 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ## 🐳 Getting Started
 
-This is an example of how to set up LakeBench locally. To get a local copy up, running follow these simple example steps.
+This is an example of how to set up deepjoin locally. To get a local copy up, running follow these simple example steps.
 
 ### Prerequisites
 
@@ -80,11 +80,7 @@ then use pip to install -r requirements.txt
 pip install -r requirements.txt
 ```
 
-From now on, you can start use LakeBench by typing 
 
-```sh
-python test.py
-```
 
 ### Prepare Datasets
 
@@ -116,13 +112,22 @@ You need to properly install nvidia driver first. To use GPU in a docker contain
 **Step2: Pretrain**
 
 ```sh
-python pretrain.py --task webtable
+python deepjoin_train.py --dataset opendata --opendata all-mpnet-base-v2 --model_save_path /deepjoin/model/output  
+-- dataset [choose task, str] [opendata, webtable]
+--opendata [train_model name str] [all-mpnet-base-v2]
+--model_save_path [trained_model_save_path,str]
+--file_train_path [pretain_file_path,str]
+--train_csv_file [pretrain_file path str]
+--storepath [pretrain index store path str]
 ```
 
-**Step3: Indexing**
+**Step3: infer**
 
 ```sh
-python index.py --benchmark webtable
+python deepjoin_infer.py 
+-- dataset [choose task, str] [opendata, webtable]
+--datafile [infer_tables_file ,str]
+--storepath [final_reslut_storepath,str]
 ```
 
 **Step4: Querying**
