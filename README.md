@@ -296,8 +296,6 @@ run commond: python python union_creat_topkfile.py
 
 
 
-```
-
 If you want to try other algorithms, you can read more details according to the table:
 
 <div id="-table"></div> 
