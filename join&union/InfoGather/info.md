@@ -47,18 +47,19 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ```
 .
-├─── img                    # picture of model
-├─── CreatIndex.py          # cerat KIV 、KIA 、Inverted index、docnum, etc                     
+├─── img                             # picture of model
+├─── CreatIndex.py                   # cerat KIV 、KIA 、Inverted index、docnum, etc                     
 | 
-├─── binaryGraphMatch.py    # binaryGrapthMatch to achieve union base on join               
-|─── changeParamiter_PPR.py # ppr
-|─── creat_top30
-|─── process_table_tosentence.py         
+├─── binaryGraphMatch.py             # binaryGrapthMatch to achieve union base on join               
+|─── changeParamiter_PPR_opendata.py # full ppr for opendata set 
+|─── changeParamiter_PPR_webtable.py # full ppr for webtable set 
+|─── creat_topk_join.py              #  get topk for querying about join
+|─── creat_topk_union.py             #  get topk for querying about union
 |   
 | 
-├─── join             # join algorithms               
-| ├─── deepjoin_train.py
-| ├─── deepjoin_infer.py
+├─── join             # join               
+|─── join_offline_creat_index.py     # creat offline_index for join
+| 
 ```
 
 <br>
