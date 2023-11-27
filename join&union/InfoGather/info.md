@@ -113,9 +113,8 @@ pip install -r requirements.txt
 
 <span id="-quickstart"></span>
 
-## 🐠 Instruction
+## 🐠 join
 
-infogather is easy to use and extend. Going through the bellowing examples will help you familiar with infogather for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 **Step1: Check your environment**
 
@@ -158,6 +157,36 @@ run commond: python join_creatofflineIndex_webtable_opendata.py
 -- filepath: string,the index of final_res_dic.pkl filepath  
 -- storepath: string, the result of topk file store path  
 ```
+
+
+
+## 🐠 union
+
+infogather is easy to use and extend. Going through the bellowing examples will help you familiar with infogather for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
+
+**Step1: Check your environment**
+
+You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
+
+**Step2: online**
+
+```sh
+# online:  
+script: union_opendata.py/union_webtable.py
+python union_opendata.py/union_webtable.py
+
+
+```
+
+**Step3: get_topk**
+```sh
+# get topk:  
+
+topk: union_creat_topkfile.py
+script: python union_creat_topkfile.py
+run commond: python python union_creat_topkfile.py
+```
+
 <br>
 
 
