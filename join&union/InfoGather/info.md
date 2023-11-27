@@ -91,7 +91,7 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ## 🐳 Getting Started
 
-This is an example of how to set up deepjoin locally. To get a local copy up, running follow these simple example steps.
+This is an example of how to set up infogather locally. To get a local copy up, running follow these simple example steps.
 
 ### Prerequisites
 
@@ -114,57 +114,49 @@ pip install -r requirements.txt
 
 ## 🐠 Quick Start
 
-Deepjoin is easy to use and extend. Going through the bellowing examples will help you familiar with Deepjoin for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
+infogather is easy to use and extend. Going through the bellowing examples will help you familiar with infogather for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 **Step1: Check your environment**
 
 You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
 
-**Step2: Pretrain**
+**Step2: index**
 
 ```sh
-python deepjoin_train.py --dataset opendata --opendata all-mpnet-base-v2 --model_save_path /deepjoin/model/output  
--- dataset [choose task, str] [opendata, webtable]
---opendata [train_model name str] [all-mpnet-base-v2]
---model_save_path [trained_model_save_path,str]
---file_train_path [pretain_file_path,str]
---train_csv_file [pretrain_file path str]
---storepath [pretrain index store path str]
+python join_creatofflineIndex_webtable_opendata.py 
+-- datalist: list, dataset list
+-- indexstorepath: string, the path of storing index  
+-- columnValue_rate: float, the columnValue importance of the column  
+-- columnName_rate :  float, the columnName importance of the column  
+-- columnWith_rate : float, the columnWith importance of the column  
+-- dataset_large_or_small: sting , large or small  
+-- num_walks: int, the superparameter of ppr  
+-- reset_pro: float,the superparameter of ppr  
 ```
 
-**Step3: infer**
+**Step3: online**
 
 ```sh
-python deepjoin_infer.py 
--- dataset [choose task, str] [opendata, webtable]
---datafile [infer_tables_file ,str]
---storepath [final_reslut_storepath,str]
+# online:  
+script: join_queryonline_opendata.py/join_queryonline_webtable.py    
+run commond: python join_creatofflineIndex_webtable_opendata.py  
+
+* parameters  
+-- queryfilepath:string the querytablefilepath
+-- columnname: the query column
 ```
 
-**Step4: Indexing**
-
-Here are some parameters:
-
-> --benchmark [Choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
-
+**Step4: online**
 ```sh
-python index.py --benchmark webtable
+# get topk:  
+
+topk: join_creat_topkfile.py/join_creat_topkfile.py  
+script: python join_creat_topkfile.py  
+run commond: python join_creatofflineIndex_webtable_opendata.py  
+* parameters：  
+-- filepath: string,the index of final_res_dic.pkl filepath  
+-- storepath: string, the result of topk file store path  
 ```
-
-**Step5: Querying**
-
-> --benchmark [Choose benchmark, str] [opendata, opendata_large, webtable, webtable_large]
->
-> --K [Choose top-*k* ,int] [5~60]
->
-> --threshold [Choose threshold, float] [0.5~1.0]
->
-> --N [Choose N, int] [4, 10, 16, 25, 50]
-
-```sh
-python query.py --benchmark webtable --K 5 --N 10 --threshold 0.7
-```
-
 <br>
 
 
