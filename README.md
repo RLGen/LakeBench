@@ -140,8 +140,8 @@ Here is an example to train Starmie on *Webtable*. Training other supported algo
 <br>
 
 <div align="center">
-<img src="img/infogather.jpg" width="1000px">
-<img src="img/info2.jpg" width="1000px">
+<img src="imgs/infogather.jpg" width="1000px">
+<img src="imgs/info2.jpg" width="1000px">
 </div>
 <br>
 
