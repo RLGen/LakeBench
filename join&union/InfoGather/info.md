@@ -76,6 +76,8 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 ├─── queryOnline.py                                  # query
 ├─── querydata.py                                    # process query
 ├─── staticdata.py                                   # static data
+├─── staticdata_union_opendat.py                     
+├─── staticdata_union_webtable.py                  
 ├─── myLogger.py                                     # log file
 ├─── info.md                                         # readme file
 
