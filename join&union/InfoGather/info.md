@@ -71,7 +71,13 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 |─── union_staticdata_opendata.py                    # static data for opendata
 |─── union_staticdata_webtable.py                    # static data for webtable
 |
-├─── util.py                                         # common functions   
+├─── util.py                                         # common functions
+├─── page_ranks.py                                   # pageranks
+├─── queryOnline.py                                  # query
+├─── querydata.py                                    # process query
+├─── staticdata.py                                   # static data
+├─── myLogger.py                                     # log file
+├─── info.md                                         # readme file
 
 ```
 
