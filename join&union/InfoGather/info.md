@@ -95,12 +95,12 @@ This is an example of how to set up deepjoin locally. To get a local copy up, ru
 
 ### Prerequisites
 
-Deepjoin is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
+infogather is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
 
 To insall the required packages, you can create a conda environmennt:
 
 ```sh
-conda create --name deepjoin_env python=3.
+conda create --name info_env python=3.
 ```
 
 then use pip to install -r requirements.txt
