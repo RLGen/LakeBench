@@ -22,7 +22,8 @@
 <br>
 
 <div align="center">
-<img src="img/.jpg" width="1000px">
+<img src="img/infogather.jpg" width="1000px">
+<img src="img/info2.jpg" width="1000px">
 </div>
 <br>
 
