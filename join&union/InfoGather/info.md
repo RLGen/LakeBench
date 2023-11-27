@@ -47,19 +47,32 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ```
 .
-├─── img                             # picture of model
-├─── CreatIndex.py                   # cerat KIV 、KIA 、Inverted index、docnum, etc                     
+├─── img                                             # picture of model
+├─── CreatIndex.py                                   # cerat KIV 、KIA 、Inverted index、docnum, etc                     
 | 
-├─── binaryGraphMatch.py             # binaryGrapthMatch to achieve union base on join               
-|─── changeParamiter_PPR_opendata.py # full ppr for opendata set 
-|─── changeParamiter_PPR_webtable.py # full ppr for webtable set 
-|─── creat_topk_join.py              #  get topk for querying about join
-|─── creat_topk_union.py             #  get topk for querying about union
+├─── binaryGraphMatch.py                             # binaryGrapthMatch to achieve union base on join               
+|─── changeParamiter_PPR_opendata.py                 # full ppr for opendata set 
+|─── changeParamiter_PPR_webtable.py                 # full ppr for webtable set 
+|─── creat_topk_join.py                              #  get topk for querying about join
+|─── creat_topk_union.py                             #  get topk for querying about union
 |   
-| 
-├─── join             # join               
-|─── join_offline_creat_index.py     # creat offline_index for join
-| 
+├─── join.py             # join                                
+|─── join_creatofflineIndex_webtable_opendata.py     # creat offline_index for join
+|─── join_queryonline_webtable.py                    # query online for webtable
+|─── join_queryonline_opendata.py                    # query online for opendata
+|─── join_creat_topkfile.py                          # get topkfile for join
+|─── join_staticdata_webtable_opendat.py             # stati cdata
+|
+├─── union.py      
+├─── union.py            # union                                
+|─── union_webtable.py                               # union on webtable
+|─── union_opendata.py                               # union on opendata
+|─── union_creat_topkfile.py                         # get topkfile about union
+|─── union_staticdata_opendata.py                    # static data for opendata
+|─── union_staticdata_webtable.py                    # static data for webtable
+|
+├─── util.py                                         # common functions   
+
 ```
 
 <br>
