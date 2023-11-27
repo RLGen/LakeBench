@@ -1,12 +1,5 @@
-
-
-
-
-
-
-
 <div align= "center">
-    <h1> Paper：InfoGather- Entity Augmentation and Attribute Discovery By Holistic Matching with Web Tables   code for join and union</h1>
+    <h1> InfoGather- Entity Augmentation and Attribute Discovery By Holistic Matching with Web Tables   code for join and union</h1>
 </div>
 <p align="center">
   <a href="#-community">Community</a> •
@@ -90,13 +83,12 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 <span id="-getstart"></span>
 
-## 🐳 Getting Started
+## 🐳 Instruction
+Infogather is easy to use and extend. Going through the bellowing examples will help you familiar with infogather for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
-This is an example of how to set up infogather locally. To get a local copy up, running follow these simple example steps.
+### Pre-requisites
 
-### Prerequisites
-
-infogather is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
+Infogather is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
 
 To insall the required packages, you can create a conda environmennt:
 
@@ -104,7 +96,7 @@ To insall the required packages, you can create a conda environmennt:
 conda create --name info_env python=3.
 ```
 
-then use pip to install -r requirements.txt
+then use pip to install the required packages
 
 ```sh
 pip install -r requirements.txt
@@ -162,11 +154,9 @@ run commond: python join_creatofflineIndex_webtable_opendata.py
 
 ## 🐠 union
 
-infogather is easy to use and extend. Going through the bellowing examples will help you familiar with infogather for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
-
 **Step1: Check your environment**
 
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`
+You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`. Because the we often get the results of union search based on the Bipartite Graph Matching on the results of join search, which is stored in `storepath (the join result of topk file store path)` 
 
 **Step2: online**
 
