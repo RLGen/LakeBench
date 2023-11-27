@@ -122,7 +122,7 @@ The detailed instructions for downloading and processing are shown in <a href = 
 LakeBench is easy to use and extend. Going through the bellowing examples will help you familiar with LakeBench for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 ### Example
-Here is an example to train Starmie on *Webtable*. Training other supported algorithms (on other datasets with different query) can be specified by the <a href = "#-table">table</a> below.
+Here is an example to run InfoGather. Running other supported algorithms (on other datasets with different query) can be specified by the <a href = "#-table">table</a> below.
 
 <div align= "center">
     <h1> InfoGather-Entity Augmentation and Attribute Discovery By Holistic Matching with Web Tables</h1>
