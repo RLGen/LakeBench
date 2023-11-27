@@ -47,13 +47,13 @@ We deeply appreciate the invaluable effort contributed by our dedicated team of 
 
 ```
 .
-├─── img                    # picture of different experiments
-├─── all-mpnet-base-v2      #model name because this file is too large  it is not uploaded ,but you can download it from    https://huggingface.co/sentence-transformers/all-mpnet-base-v2                     
+├─── img                    # picture of model
+├─── CreatIndex.py          # cerat KIV 、KIA 、Inverted index、docnum, etc                     
 | 
-├─── datapreocess           # process data                
-| ├─── dataset_to_sentences.py 
-| ├─── multi_process_csv.py
-| ├─── process_table_tosentence.py         
+├─── binaryGraphMatch.py    # binaryGrapthMatch to achieve union base on join               
+|─── changeParamiter_PPR.py # ppr
+|─── creat_top30
+|─── process_table_tosentence.py         
 |   
 | 
 ├─── join             # join algorithms               
