@@ -83,9 +83,9 @@ pip install -r requirements.txt
 
 <span id="-quickstart"></span>
 
-## 🐠 Quick Start
+## 🐠 Instruction
 
-Deepjoin is easy to use and extend. Going through the bellowing examples will help you familiar with Deepjoin for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
+Deepjoin is easy to use and extend. Going through the bellowing examples will help you familiar with Deepjoin for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 **Step1: Check your environment**
 

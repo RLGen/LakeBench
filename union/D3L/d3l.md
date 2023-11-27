@@ -39,7 +39,7 @@ See [here](./examples/notebooks/D3L_hello_world.ipynb) for an example notebook.
 However, keep in mind that this is a BETA version and future releases will follow. Until then, if you encounter any issues feel free to raise them [here](https://github.com/alex-bogatu/d3l/issues).
 
 
-<h2>Quick Start</h2>
+<h2>Instruction</h2>
 
 **Step1: Check your environment**
 

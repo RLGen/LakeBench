@@ -3,7 +3,7 @@
 </div>
 
 
-<h2>Quik Start</h2>
+<h2>Instruction</h2>
 
 **Step1: Check your environment**
 

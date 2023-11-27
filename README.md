@@ -117,9 +117,9 @@ The detailed instructions for downloading and processing are shown in <a href = 
 
 <span id="-quickstart"></span>
 
-## 🐠 Quick Start
+## 🐠 Instruction
 
-LakeBench is easy to use and extend. Going through the bellowing examples will help you familiar with LakeBench for quick use, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
+LakeBench is easy to use and extend. Going through the bellowing examples will help you familiar with LakeBench for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 ### Train
 

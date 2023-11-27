@@ -17,7 +17,7 @@
 
 <br>
 
-<h2>Quick Start</h2>
+<h2>Instruction</h2>
 
 **Step1: create Uset minhashLsh**
 
