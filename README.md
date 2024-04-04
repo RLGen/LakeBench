@@ -339,3 +339,49 @@ Efficiency and Memory Usage of Table Union Search:
 <div align="center">
 <img src="imgs/table2.png" width="1000px">
 </div>
+
+
+## 🐠 LakeCompass
+We propose to build an end-to-end prototype system, LakeCompass that encapsulate the above functionalities through flexible Python APIs, where the user can upload data, construct indexes, search tables and build ML models. We also provide a Web interface to serve table search and analysis in a more intuitive way.
+
+### Example
+We supports various types of indexes built over data lakes, enabling efficient table searches across three categories: keyword-based, joinable, and unionable.
+First we invoke ‘indexing’ function to build an index over data lake metadata. The arguments for this function include index type, search type, and an instance of a configuration class. Once the index is created, we utilize ‘keyword_search’ function to retrieve tables associated with the keyword ‘education’.
+```sh
+# build index for the datalake
+datalake = LakeCompass,DataLake('/datalake demo')
+keyword_index = datalake.metadata.indexing(index_type='HNSW', search_type='keyword', config=LakeCompass.HNSWconfig())
+
+# keyword based search
+candidate_table = LakeCompass.keyword_search(keyword_index, 'education')
+```
+
+After selecting a table as the query table and training a model based solely on it, the results indicate that the performance of the model tends to be poor.
+```sh
+# train configuration
+predict_col ='Educational Category'
+model_config = {'model':'SvM','type': 'classification', 'k':4, 'model config': SVMconfig()}
+query_table = LakeCompass.read('education_Des_Moines.csv')
+query_table_model = DownstreamModel(**model_config)
+val_set = pd.read csv('val set.csv')
+test_set = pd.read csv('test set.csv')
+# trian a model using query table
+query_table_model.train(query_table, predict_col, val_set)
+query_table_model.eval(test_set, predict_col)
+```
+
+Therefore, we proceed to employ the ‘union_search’ function to retrieve unionable tables based on semantics similarities. Before the search, we build another index over the columns within the data lake.
+```sh
+#unionable table search
+union_index = datalake.columns.indexing(index_type='HNSW', search_type='union', config=LakeCompass.HNSWconfig())
+unionable_tables = LakeCompass.union_search(union_index, query_table)
+```
+
+We further provides ‘auto_augment’ function that augments the original query table with the retrieved tables based on their benefits to the downstream model performance. Simultaneously,  the model is trained using the augmented table datasets. This augmentation and training process follows a novel iterative strategy. The results indicate that the model trained on the augmented table datasets outperforms the former model that trained solely on the query table.
+```sh
+#train another model using unionable tables
+augmented_table_model = DownstreamModel(**model_config)
+augmented_table_model = unionable_tables.auto_augment(augmented_table_model, val_set, predict_col)
+# evaluate models
+augmented_table_model.eval(test_set, predict_col)
+```
