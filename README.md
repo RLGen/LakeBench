@@ -82,7 +82,7 @@ This is an example of how to set up LakeBench locally. To get a local copy up, r
 
 ### Prerequisites
 
-LakeBench is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
+LakeBench is bulit on pytorch, with torchvision, torchaudio, and transformers.
 
 To insall the required packages, you can create a conda environmennt:
 
