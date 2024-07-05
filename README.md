@@ -23,7 +23,7 @@
 
   Despite their paramount significance, existing benchmarks for evaluating and supporting *table discovery* processes have been limited in scale and diversity, often constrained by small dataset sizes. They are not sufficient to systematically evaluate the effectiveness, scalability, and efficiency of various solutions.
 
-  LakeBench consists of over 16 million real tables **–1,600X** larger than existing data lakes, frommultiple sources, with an overall size larger than 1TB (**100X** larger). LakeBench contains both synthesized and real queries, in total more than 10 thousand queries –**10X** more than existing benchmarks, for join and union search respectively. 
+  LakeBench consists of over 16 million real tables **–1,600X** larger than existing data lakes, from multiple sources, with an overall size larger than 1TB (**100X** larger). LakeBench contains both synthesized and real queries, in total more than 10 thousand queries –**10X** more than existing benchmarks, for join and union search respectively. 
 
 🙌  With LakeBench, we thoroughly evaluate the state-of-the-art *table discovery* approaches on our benchmark and present our experimental findings from diverse perspectives, which we believe can push the research of *table discovery*.
 
@@ -82,9 +82,9 @@ This is an example of how to set up LakeBench locally. To get a local copy up, r
 
 ### Prerequisites
 
-LakeBench is bulit on pytorch, with torchvision, torchaudio, and transformers.
+LakeBench is built on pytorch, with torchvision, torchaudio, and transformers.
 
-To insall the required packages, you can create a conda environmennt:
+To install the required packages, you can create a conda environment:
 
 ```sh
 conda create --name lakebench python=3.
@@ -122,7 +122,7 @@ The detailed instructions for downloading and processing are shown in <a href = 
 LakeBench is easy to use and extend. Going through the bellowing examples will help you familiar with LakeBench for detailed instructions, evaluate an existing join/union algorithm on your own dataset, or developing new join/union algorithms.
 
 ### Example
-Here is an example to run InfoGather. Running other supported algorithms (on other datasets with different query) can be specified by the <a href = "#-table">table</a> below.
+Here is an example to run InfoGather. Running other supported algorithms (on other datasets with different queries) can be specified by the <a href = "#-table">table</a> below.
 
 <div align= "center">
     <h1> InfoGather-Entity Augmentation and Attribute Discovery By Holistic Matching with Web Tables</h1>
@@ -205,7 +205,7 @@ Infogather is easy to use and extend. Going through the bellowing examples will 
 
 Infogather is bulit on pytorch, with torchvision, torchaudio, and transfrmers.
 
-To insall the required packages, you can create a conda environmennt:
+To install the required packages, you can create a conda environment:
 
 ```sh
 conda create --name info_env python=3.
@@ -271,7 +271,7 @@ run commond: python join_creatofflineIndex_webtable_opendata.py
 
 **Step1: Check your environment**
 
-You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`. Because the we often get the results of union search based on the Bipartite Graph Matching on the results of join search, which is stored in `storepath (the join result of topk file store path)` 
+You need to properly install nvidia driver first. To use GPU in a docker container You also need to install nvidia-docker2 ([Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)). Then, Please check your CUDA version via `nvidia-smi`. Because we often get the results of union search based on the Bipartite Graph Matching on the results of join search, which is stored in `storepath (the join result of topk file store path)` 
 
 **Step2: online**
 
@@ -289,7 +289,7 @@ python union_opendata.py/union_webtable.py
 
 topk: union_creat_topkfile.py
 script: python union_creat_topkfile.py
-run commond: python python union_creat_topkfile.py
+run command: python python union_creat_topkfile.py
 ```
 
 <br>
@@ -342,17 +342,17 @@ Efficiency and Memory Usage of Table Union Search:
 
 
 ## 🐠 LakeCompass
-We propose to build an end-to-end prototype system, LakeCompass that encapsulate the above functionalities through flexible Python APIs, where the user can upload data, construct indexes, search tables and build ML models. We also provide a Web interface to serve table search and analysis in a more intuitive way.
+We propose to build an end-to-end prototype system, LakeCompass that encapsulates the above functionalities through flexible Python APIs, where the user can upload data, construct indexes, search tables and build ML models. We also provide a Web interface to serve table search and analysis in a more intuitive way.
 
 ### Example
-We supports various types of indexes built over data lakes, enabling efficient table searches across three categories: keyword-based, joinable, and unionable.
-First we invoke ‘indexing’ function to build an index over data lake metadata. The arguments for this function include index type, search type, and an instance of a configuration class. Once the index is created, we utilize ‘keyword_search’ function to retrieve tables associated with the keyword ‘education’.
+We support various types of indexes built over data lakes, enabling efficient table searches across three categories: keyword-based, joinable, and unionable.
+First, we invoke ‘indexing’ function to build an index over data lake metadata. The arguments for this function include index type, search type, and an instance of a configuration class. Once the index is created, we utilize ‘keyword_search’ function to retrieve tables associated with the keyword ‘education’.
 ```sh
 # build index for the datalake
 datalake = LakeCompass,DataLake('/datalake demo')
 keyword_index = datalake.metadata.indexing(index_type='HNSW', search_type='keyword', config=LakeCompass.HNSWconfig())
 
-# keyword based search
+# keyword-based search
 candidate_table = LakeCompass.keyword_search(keyword_index, 'education')
 ```
 
