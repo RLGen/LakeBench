@@ -1,0 +1,4 @@
+pandas
+tqdm
+numpy
+heapq
