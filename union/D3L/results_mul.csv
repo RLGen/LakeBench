@@ -1,21 +1,3 @@
-query_table,candidate_table,query_col_name,candidate_col_name
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_1____3.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_1____3.csv,"Month",Month
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c1_0____1.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c1_0____1.csv,"Month","Day"
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c2_0____0.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c2_0____0.csv,"Month",Month
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_1____1.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_1____1.csv,"Month",Month
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_0____4.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_0____4.csv,"Month",Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_0____0.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c3_0____0.csv,"Month",Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c4_0____4.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c4_0____4.csv,"Month",Month
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c2_0____1.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c2_0____1.csv,"Month",Month
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c2_0____2.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c2_0____2.csv,"Month",Month
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c1_0____0.csv,Day,Day
-t_1f6b65ebc2ab3ed3____c2_0____3.csv,t_1f6b65ebc2ab3ed3____c1_0____0.csv,"Month","Day"
+version https://git-lfs.github.com/spec/v1
+oid sha256:5402bcdff6594d8a4845f768db9e01b03e387cc4ac4a30dab553678d65a2c7e0
+size 1751
