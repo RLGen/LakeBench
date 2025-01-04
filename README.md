@@ -387,6 +387,6 @@ augmented_table_model.eval(test_set, predict_col)
 ```
 
 
-# Acknowledgement of *LakeBench: Benchmarks for Data Discovery over Data Lakes*
+## Acknowledgement of *LakeBench: Benchmarks for Data Discovery over Data Lakes*
 
 We would like to acknowledge another work with the same name, "*LakeBench: Benchmarks for Data Discovery over Data Lakes*". This work presents a comprehensive suite of benchmarks tailored for data discovery in data lakes, focusing on model evaluation, which makes a contribution to this field.
